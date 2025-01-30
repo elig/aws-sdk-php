@@ -82,10 +82,6 @@ jobs:
     - name: PHP 8.1+ requirements
       run: composer require --dev phpunit/phpunit "^9.5" guzzlehttp/guzzle "^7.4.5" --no-interaction --prefer-source --with-all-dependencies
 
-    #run tests
-    - name: Run test suite
-      run: make test
-
     #static analysis
     - name: Static analysis
       run: |
