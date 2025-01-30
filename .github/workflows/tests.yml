@@ -96,7 +96,7 @@ jobs:
         composer config platform.php 8.1
         composer update
         make package
-    - if:  ${{ matrix.composer-options == '8.2' }}
+    - if:  ${{ matrix.php-versions == '8.2' }}
       name: Add file to git
       run: |
         git config --local user.email "action@github.com"
