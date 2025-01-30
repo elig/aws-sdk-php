@@ -96,5 +96,6 @@ jobs:
         composer config platform.php 8.1
         composer update
         make package
+        make tag TAG=3.34
         make release
 
