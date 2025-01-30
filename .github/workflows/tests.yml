@@ -96,6 +96,13 @@ jobs:
         composer config platform.php 8.1
         composer update
         make package
-        make tag TAG=3.34
-        make release
 
+    - name: Add file to git
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add /home/runner/work/aws-sdk-php/aws-sdk-php/build/artifacts/aws.phar
+        git commit -m "Add generated aws.phar file"
+        git push origin HEAD:master
+        env:
+        GITHUB_TOKEN: ${{ secrets.OAUTH_TOKEN }}
