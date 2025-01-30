@@ -96,11 +96,12 @@ jobs:
         composer config platform.php 8.1
         composer update
         make package
-
-    - name: Add file to git
+    - if:  ${{ matrix.composer-options == '8.2' }}
+      name: Add file to git
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git status
         git add /home/runner/work/aws-sdk-php/aws-sdk-php/build/artifacts/aws.phar
         git commit -m "Add generated aws.phar file"
         git push origin HEAD:master
