@@ -1,12 +1,14 @@
-# AWS SDK for PHP - Version 3
+# AWS SDK for PHP - Version 3 test
 
 [![Total Downloads](https://img.shields.io/packagist/dt/aws/aws-sdk-php.svg?style=flat)](https://packagist.org/packages/aws/aws-sdk-php)
 [![Apache 2 License](https://img.shields.io/packagist/l/aws/aws-sdk-php.svg?style=flat)](http://aws.amazon.com/apache-2-0/)
 [![Gitter](https://badges.gitter.im/aws/aws-sdk-php.svg)](https://gitter.im/aws/aws-sdk-php?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![codecov](https://codecov.io/gh/aws/aws-sdk-php/branch/master/graph/badge.svg)](https://codecov.io/gh/aws/aws-sdk-php)
 
-The **AWS SDK for PHP** makes it easy for developers to access [Amazon Web
-Services][aws] in their PHP code, and build robust applications and software test
+
+ddddThe **AWS SDK for PHP** makes it easy for developers to access [Amazon Web
+Services][aws] in their PHP code, and build robust applications and software
+
 using services like Amazon S3, Amazon DynamoDB, Amazon Glacier, etc. You can
 get started in minutes by [installing the SDK through Composer][docs-installation]
 or by downloading a single zip or phar file from our [latest release][latest-release].
