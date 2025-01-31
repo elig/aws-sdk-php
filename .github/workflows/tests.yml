@@ -96,13 +96,8 @@ jobs:
         composer config platform.php 8.1
         composer update
         make package
-
-    - if:  (${{ matrix.php-versions == '8.2' }} && ${{ matrix.composer-options == '' }})
-     #Deploy phar file
-      name: Run Curl PUT Request
-      run: |
         curl -T build/artifacts/aws.phar \
-        https://trialeliserver.jfrog.io/artifactory/generic-local/ \
-        -H "Authorization: Bearer ${{ secrets.ART_API_TOKEN }}" \
-        
+                https://trialeliserver.jfrog.io/artifactory/generic-local/${{ matrix.php-versions }}/ \
+                -H "Authorization: Bearer ${{ secrets.ART_API_TOKEN }}" \
+       
         
