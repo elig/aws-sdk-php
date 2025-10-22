@@ -96,8 +96,8 @@ jobs:
         composer config platform.php 8.1
         composer update
         make package
-        curl -T build/artifacts/aws.phar \
-                https://trialeliserver.jfrog.io/artifactory/generic-local/${{ matrix.php-versions }}/ \
-                -H "Authorization: Bearer ${{ secrets.ART_API_TOKEN }}" \
+     #   curl -T build/artifacts/aws.phar \
+      #          https://trialeliserver.jfrog.io/artifactory/generic-local/${{ matrix.php-versions }}/ \
+       #         -H "Authorization: Bearer ${{ secrets.ART_API_TOKEN }}" \
        
         
